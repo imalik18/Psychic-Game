@@ -6,38 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="game.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
     <div>
-        <p id="userchoice-text"></p>
-        <p id="computerchoice-text"></p>
-        <p id="wins-text"></p>
-        <p id="losses-text"></p>
-        <p id="ties-text"></p>
+        <h1 id="computerquestion-text">Guess What Letter I'm Thinking of?</h1>
+        <p id="wins-text">Wins:</p>
+        <p id="losses-text">Losses:</p>
+        <p id="guessesleft-text">Guesses Left:</p>
+        <p id="guesssofar-text">Your Guesses so far:</p>
     </div>    
 
-    
-    
-    <script type="text/javascript">
-
-        // This is an array that lists out all of the alphabets
-        var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "M", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-        
-        // This function is run whenever the user presses a key.
-        document.onkeyup = function(event) {
-
-            // Determines which key was pressed.
-            var userGuess = event.key;
-
-            //Randomly chooses a choice from the options array. This is the Computer's guess.
-            var computerGuess = letters[Math.floor(Math.random() * letters.length)];
-        }
-        
-        //
-    </script>
 
 
 </body >
