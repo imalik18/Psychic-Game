@@ -5,7 +5,7 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var guessSoFar = 0;
+var guessSoFar = "";
 
 // Create variables that hold references to the places in the HTML where we want to display things.
 var computerquestionText = document.getElementById("computerquestion-text");
@@ -37,12 +37,25 @@ document.onkeypress = function (event) {
     if (guessesLeft === 0) {
         losses++;
     }
+    
+    //if (guessesLeft < 0) {
+        //if guesses are less than 0, the game should reset itself
+        
+      
+        
+
+    
+
 
     // Display wins/losses/guesses left/guesses so far)
-    document.getElementById('wins-text').innerHTML = "wins: " + wins;
-    document.getElementById('losses-text').innerHTML = "losses: " + losses;
-    document.getElementById('guessesleft-text').innerHTML = "guesses left: " + guessesLeft;
-    document.getElementById('guesssofar-text').innerHTML = "guesses so far: " + guessSoFar;
+        document.getElementById('wins-text').innerHTML = "wins: " + wins;
+        document.getElementById('losses-text').innerHTML = "losses: " + losses;
+        document.getElementById('guessesleft-text').innerHTML = "guesses left: " + guessesLeft;
+        document.getElementById('guesssofar-text').innerHTML = "Your guesses so far: " + guessSoFar; 
+        
+        
+        
+    
 
     //winsText.textContent = "wins: " + wins;
     //lossesText.textContent = "losses: " + losses;
