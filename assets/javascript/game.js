@@ -19,31 +19,33 @@ document.onkeypress = function (event) {
 
     // Determines which key was pressed.
     var userGuess = event.key;
-
+    console.log (userGuess);
     //Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 
-    console.log(computerGuess)
+    console.log(computerGuess);
 
     //This logic determines the outcome of the game (win/loss/guesses left/guesses so far).
 
-    if (userGuess === computerGuess) {
+    if (userGuess.toLowerCase () === computerGuess.toLowerCase()) {
         wins++;
+    
     } else {
         guessesLeft--;
     }
 
-    if (guessesLeft = 0) {
+    if (guessesLeft === 0) {
         losses++;
     }
 
     // Display wins/losses/guesses left/guesses so far)
-    // document.getElementById('wins').innerHTML = "Wins: " + wins;
-    // document.getElementById('losses').innerHTML = "Losses: " + losses;
-    // document.getElementById('guesses').innerHTML= "Guesses Left: " + guesses;
+    document.getElementById('wins-text').innerHTML = "wins: " + wins;
+    document.getElementById('losses-text').innerHTML = "losses: " + losses;
+    document.getElementById('guessesleft-text').innerHTML = "guesses left: " + guessesLeft;
+    document.getElementById('guesssofar-text').innerHTML = "guesses so far: " + guessSoFar;
 
-    .winsText.textContent = "wins: " + wins;
-    .lossesText.textContent = "Losses: " + losses;
-    .guessesLeftText.textContent = "Guesses Left: " + guesses;
-    .guessSoFar.textContent = "Guesses so far: " + guessesfar;
-} 
+    //winsText.textContent = "wins: " + wins;
+    //lossesText.textContent = "losses: " + losses;
+    //guessesLeftText.textContent = "guesses Left: " + guesses;
+    //guessSoFar.textContent = "guesses so far: " + guessesfar;
+};
