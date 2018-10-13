@@ -5,7 +5,7 @@ var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var guessSoFar = "";
+var guessSoFar = 0;
 
 // Create variables that hold references to the places in the HTML where we want to display things.
 var computerquestionText = document.getElementById("computerquestion-text");
@@ -19,7 +19,7 @@ document.onkeypress = function (event) {
 
     // Determines which key was pressed.
     var userGuess = event.key;
-    console.log (userGuess);
+    console.log(userGuess);
     //Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 
@@ -27,9 +27,9 @@ document.onkeypress = function (event) {
 
     //This logic determines the outcome of the game (win/loss/guesses left/guesses so far).
 
-    if (userGuess.toLowerCase () === computerGuess.toLowerCase()) {
+    if (userGuess.toLowerCase() === computerGuess.toLowerCase()) {
         wins++;
-    
+
     } else {
         guessesLeft--;
     }
@@ -37,28 +37,31 @@ document.onkeypress = function (event) {
     if (guessesLeft === 0) {
         losses++;
     }
-    
-    //if (guessesLeft < 0) {
+
+    if (guessesLeft <= 0) {
+
+        alert("You Lost!")
         //if guesses are less than 0, the game should reset itself
         
-      
-        
-
-    
 
 
-    // Display wins/losses/guesses left/guesses so far)
+
+
+
+
+        // Display wins/losses/guesses left/guesses so far)
         document.getElementById('wins-text').innerHTML = "wins: " + wins;
         document.getElementById('losses-text').innerHTML = "losses: " + losses;
         document.getElementById('guessesleft-text').innerHTML = "guesses left: " + guessesLeft;
-        document.getElementById('guesssofar-text').innerHTML = "Your guesses so far: " + guessSoFar; 
-        
-        
-        
-    
+        document.getElementById('guesssofar-text').innerHTML = "Your guesses so far: " + guessSoFar;
 
-    //winsText.textContent = "wins: " + wins;
-    //lossesText.textContent = "losses: " + losses;
-    //guessesLeftText.textContent = "guesses Left: " + guesses;
-    //guessSoFar.textContent = "guesses so far: " + guessesfar;
-};
+
+
+
+
+        //winsText.textContent = "wins: " + wins;
+        //lossesText.textContent = "losses: " + losses;
+        //guessesLeftText.textContent = "guesses Left: " + guesses;
+        //guessSoFar.textContent = "guesses so far: " + guessesfar;
+    };
+}
