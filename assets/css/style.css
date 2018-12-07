@@ -5,5 +5,49 @@ p {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+
+.header {
+    background-image: url("images/questionmark.jpg"); 
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+
+}
+
+body {
+    background-color: white;
+    background-image: url("images/qmarkbg.jpg");
+    height:100%;
+}
+html {
+    height:100%;
+}
+#content {
+    display:flex;
+    justify-content: center;
+  
+    height: 100%;
+}
+
+.score-board {
+    display: block;
+    height: 300px; 
+    width: 400px;
+    background-color: #ffa700;
+    display: flex;
+  
+    color: black;
+    margin-top: 40px;
+    font-family: 'Catamaran', sans-serif;
 }
 

@@ -7,19 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+   
 </head>
 
 <body>
-    <div>
-        <h1 id="computerquestion-text">Guess What Letter I'm Thinking of?</h1>
-        <p id="wins-text">Wins:</p>
-        <p id="losses-text">Losses:</p>
-        <p id="guessesleft-text">Guesses Left:</p>
-        <p id="guesssofar-text">Your Guesses so far:</p>
-    </div>    
+    <div class="header" img src="assets/images/questionmark.jpg">
+            <h1 id="computerquestion-text">Guess What Letter I'm Thinking of?</h1>
+    </div>
+    <div id="content">
+            <div class="score-board">
+            <ul>   
+                <p id="wins-text">Wins: </p> 
+                <p id="losses-text">Losses:</p>
+                <p id="guessesleft-text">Guesses Left:</p>
+                <p>Your Guesses So Far: </p>
+                <p id="guesssofar-text"></p>
+            </ul> 
+            </div>    
+    </div>
 
 
-
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body >
 </html >
